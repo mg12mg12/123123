@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: auto;
+            border: 3px solid #000;
+            width: 500px;
+            text-align: center;
+        }
+        th{
+            border: 1px solid #000;
+        }
+        td{
+            border: 1px solid #000;
+        }
+        tr{
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>G1小組文件撰寫規則</h1>
+    <p>
+        良好的架構邏輯有助於debug與整理，並且避免整合時發生錯誤，麻煩大家為了自己的區塊負責。
+    </p>
+    <h2>語意相關-請使用html5標籤</h2>
+    <h3>介紹</h3>
+    <ul>
+        <li>header：網頁的標頭，通常放置網站標題。</li>
+        <li>nav：網頁的選單、導覽。</li>
+        <li>main：網頁的主要內容。</li>
+        <li>aside：網頁的側欄、附加內容。</li>
+        <li>article：一篇文章內容。</li>
+        <li>section：自訂的區塊，例如數篇摘要組成的空間。</li>
+        <li>footer：網頁的頁尾，通常放置聯絡方式、著作權宣告等等。</li>
+        <li>mark：強調一小塊內容。</li>
+        <li>time：顯示日期時間。</li>
+    </ul>
+    <h3>只要是容器就使用<strong>section</strong>或是<strong>article</strong></h3>
+    <h2>命名規則</h2>
+    <h3>使用蛇腹命名 </h3>
+    <p>
+        <strong>例：</strong>g1_good
+    </p>
+    <h3>命名後即時上傳資料檢視表</h3>
+    命名<strong>最外層class名稱</strong>與<strong>ID名稱</strong>時，請上傳共同資料表，避免重複，以免結合css與進行js撰寫時發生錯誤。
+    <h2>文件與路徑</h2>
+    <h3>全部使用英文</h3>
+    <p>
+        不論是資料夾、文件，全部使用能辨識且有意義的英文。
+    </p>
+    <h3>使用相對路徑</h3>
+    <h3>文件分類完整</h3>
+    <ul>
+        <li>html、php檔請不要放置在其他子資料夾內</li>
+        <li>js檔請放置在 js資料夾內</li>
+        <li>css檔請放置在 css資料夾內</li>
+        <li>圖片檔請放置在 images資料夾內</li>
+        <li>影片、影音檔請放置在 media資料夾內</li>
+    </ul>
+    <h3>圖片檔命名依照格式</h3>
+    <p>使用頁面_使用區塊(class)_icon/bg/X.副檔名</p>
+    <h2 style="color:red;">務必撰寫註解</h2>
+    <h3>註解以中文描述，並且使用句子而非斷裂單詞</h3>
+    <h3>註解姓名</h3>
+    <p>請在最外層的section註解負責人姓名</p>
+    <h3>註解區塊功能</h3>
+    <h3>註解動態修改內容</h3>
+    <p>如果該區塊會結合js/php資料動態新增修改刪除資料，請註解說明，否則整合人員會找不到東西</p>
+    <h2>css與html撰寫規則</h2>
+    <h3>禁止撰寫行內style</h3>
+    <h3>禁止使用!important</h3>
+    <h3>選取器每一層都要寫</h3>
+    <p>
+        <strong>例：</strong>
+        <span>
+            階層為：boxA>boxB>boxC>item
+        </span>
+        <br>
+        <span>
+            選取item時，請寫：.boxA .boxB .boxC .item
+        </span>
+    </p>
+    <h3>最外層section寬度固定100%</h3>
+    <h3>有padding請使用 box-sizing: border-box</h3>
+    <h3>使用定位請在註解標註父層</h3>
+    <h3>禁止使用負數z-index</h3>
+
+
+    
+</body>
+</html>
